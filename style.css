@@ -1,0 +1,147 @@
+
+h1 {
+    color: #00ffcc;           /* Неоново-зеленый акцент для заголовка */
+}
+/* Базовые настройки темы */
+body {
+    background-color: #120917; /* Экстремально темный фиолетовый (почти черный) фон */
+    color: #d8f3dc;           /* Твой светлый мятный оттенок для основного текста */
+    font-family: 'Courier New', Courier, monospace; /* Хакерский/технический шрифт */
+    margin: 40px;
+    line-height: 1.6;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    color: #3dac78;           /* Твой основной зеленый цвет */
+    text-shadow: 0 0 10px rgba(61, 172, 120, 0.3); /* Легкое неоновое свечение */
+    text-transform: uppercase; /* Все буквы заглавные для строгости */
+}
+
+h1 {
+    border-bottom: 2px solid #8a2be2; /* Фиолетовая линия под главным заголовком */
+    padding-bottom: 10px;
+}
+
+/* Панель управления (Форма) */
+.admin-panel {
+    background-color: #1a0f24; /* Темно-фиолетовый блок */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    border: 1px solid #8a2be2; /* Фиолетовая рамка */
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+}
+
+/* Поля ввода формы */
+input, textarea, select {
+    padding: 10px;
+    background-color: #0c0512; /* Черно-фиолетовый внутри полей */
+    color: #d8f3dc;
+    border: 1px solid #3dac78; /* Зеленая рамка у полей */
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Эффект при клике на поле ввода */
+input:focus, textarea:focus, select:focus {
+    border-color: #8a2be2;    /* Меняет цвет на фиолетовый при фокусе */
+    box-shadow: 0 0 8px #8a2be2;
+    outline: none;
+}
+
+/* Кнопка отправки (Главный акцент) */
+button {
+    background-color: #3dac78; /* Твой зеленый */
+    color: #120917;           /* Темный текст внутри кнопки для читаемости */
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #8a2be2; /* При наведении становится фиолетовой! */
+    color: #ffffff;
+    box-shadow: 0 0 15px #8a2be2;
+}
+
+/* Карточки проектов */
+.project-card {
+    background-color: #160d1f;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #3a2254;
+    border-left: 6px solid #555; /* Дефолтная полоса */
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateX(5px); /* Карточка слегка сдвигается при наведении */
+}
+
+/* Специфические цвета для статусов (Градиент Евы) */
+.project-card.active { 
+    border-left-color: #3dac78; /* Зеленый для активных */
+} 
+.project-card.completed { 
+    border-left-color: #8a2be2; /* Яркий фиолетовый для готовых */
+} 
+.project-card.frozen { 
+    border-left-color: #ff3333; /* Красный для мертвых/опасных зон */
+}
+
+/* Ссылки внутри карточек */
+.project-card a {
+    color: #3dac78;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    color: #8a2be2;
+    text-decoration: underline;
+}
+/* Динамический блок строки ссылки в форме */
+.link-input-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+/* Настройки выпадающего списка типа ресурса */
+.link-input-row select {
+    flex: 1;
+    min-width: 120px;
+}
+
+/* Настройки поля ввода самого URL */
+.link-input-row input {
+    flex: 3;
+}
+
+/* Кнопка удаления конкретной строки ссылки */
+.remove-link-btn {
+    background-color: transparent;
+    color: #ff3333;
+    border: 1px solid #ff3333;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.remove-link-btn:hover {
+    background-color: #ff3333;
+    color: #ffffff;
+    box-shadow: 0 0 10px #ff3333;
+}
+
+/* Обертка для медиа-материалов на экране деталей */
+.detail-media-block {
+    margin: 20px 0;
+}

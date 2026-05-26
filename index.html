@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое Проектное Кладбище</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Архив Проектов Киры</h1>
+        <p>Здесь будут жить мои законченные, текущие и "мертвые" идеи.</p>
+    </header>
+
+    <main>
+  <main>
+    <section class="admin-panel">
+        <h2>Добавить проект в свой профиль</h2>
+        <form id="project-form">
+            <!-- Контейнер для динамических ссылок -->
+<div id="links-form-container">
+    <label style="color: #3dac78; font-size: 14px; text-transform: uppercase;">Ресурсы и Медиа:</label>
+    <!-- Сюда JS будет добавлять новые поля ввода -->
+</div>
+
+<!-- Кнопка добавления нового поля -->
+<button type="button" id="add-link-field-btn" style="background: #1a0f24; color: #3dac78; border: 1px dashed #3dac78; padding: 5px 10px; font-size: 14px; margin-top: 5px;">
+    + Добавить ресурс (Код, Видео, Картинка, Документ)
+</button>
+            <input type="text" id="proj-title" placeholder="Название проекта" required>
+            <!-- Зона для загрузки картинок (Эффект владения) -->
+<div id="drop-zone" style="border: 2px dashed #3dac78; padding: 20px; text-align: center; background: #160d1f; border-radius: 4px; cursor: pointer; color: #d8f3dc; margin: 15px 0; transition: 0.3s;">
+    <span id="drop-zone-text">⤓ Перетащи сюда арт (PNG/JPG) или кликни для загрузки</span>
+    <input type="file" id="file-input" accept="image/*" style="display: none;">
+    <!-- Скрытое поле, куда мы запишем закодированную картинку для отправки в форму -->
+    <input type="hidden" id="proj-image-base64">
+</div>
+<!-- Маленькое превью, чтобы юзер видел, что файл "внутри" -->
+<div id="image-preview-container" style="display: none; margin-bottom: 15px; text-align: center;">
+    <img id="image-preview" src="" style="max-height: 150px; border: 1px solid #8a2be2; border-radius: 4px;">
+</div>
+            <textarea id="proj-desc" placeholder="Полное описание и анализ (минусы, выводы)" required></textarea>
+            <select id="proj-status">
+                <option value="active">В процессе</option>
+                <option value="completed">Завершен</option>
+                <option value="frozen">Заморожен</option>
+            </select>
+            
+            <button type="submit">Добавить</button>
+        </form>
+    </section>
+
+    <button id="back-btn" style="display: none; margin-bottom: 20px;">➔ Назад к списку</button>
+
+    <section id="profile-view">
+        <h2>Профиль: человек Кира</h2>
+        <p style="color: #8a2be2;">Статус: Междисциплинарный создатель</p>
+        <div id="projects-list-container">
+            </div>
+    </section>
+
+    <section id="details-view" style="display: none;">
+        </section>
+</main>
+
+    <script src="script.js"></script>
+</body>
+</html>
