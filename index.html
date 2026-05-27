@@ -26,12 +26,12 @@
 
 <!-- Кнопка добавления нового поля -->
 <button type="button" id="add-link-field-btn" style="background: #1a0f24; color: #3dac78; border: 1px dashed #3dac78; padding: 5px 10px; font-size: 14px; margin-top: 5px;">
-    + Добавить ресурс (Код, Видео, Картинка, Документ)
+    + Add something (Code, Video, Picture, Document)
 </button>
             <input type="text" id="proj-title" placeholder="Название проекта" required>
             <!-- Зона для загрузки картинок (Эффект владения) -->
 <div id="drop-zone" style="border: 2px dashed #3dac78; padding: 20px; text-align: center; background: #160d1f; border-radius: 4px; cursor: pointer; color: #d8f3dc; margin: 15px 0; transition: 0.3s;">
-    <span id="drop-zone-text">⤓ Перетащи сюда арт (PNG/JPG) или кликни для загрузки</span>
+    <span id="drop-zone-text">⤓ Drag your picture here (PNG/JPG) или кликни для загрузки</span>
     <input type="file" id="file-input" accept="image/*" style="display: none;">
     <!-- Скрытое поле, куда мы запишем закодированную картинку для отправки в форму -->
     <input type="hidden" id="proj-image-base64">
@@ -42,20 +42,19 @@
 </div>
             <textarea id="proj-desc" placeholder="Полное описание и анализ (минусы, выводы)" required></textarea>
             <select id="proj-status">
-                <option value="active">В процессе</option>
-                <option value="completed">Завершен</option>
-                <option value="frozen">Заморожен</option>
+                <option value="active">In work</option>
+                <option value="frozen">KILLED</option>
             </select>
             
-            <button type="submit">Добавить</button>
+            <button type="submit">Add</button>
         </form>
     </section>
 
-    <button id="back-btn" style="display: none; margin-bottom: 20px;">➔ Назад к списку</button>
+    <button id="back-btn" style="display: none; margin-bottom: 20px;">➔ Back to</button>
 
     <section id="profile-view">
-        <h2>Профиль: человек Кира</h2>
-        <p style="color: #8a2be2;">Статус: Междисциплинарный создатель</p>
+        <h2>Profile: KIRA</h2>
+        <p style="color: #8a2be2;">No status yet</p>
         <div id="projects-list-container">
             </div>
     </section>
